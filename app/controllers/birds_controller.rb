@@ -41,6 +41,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
   end
 
   # PATCH /birds/:id/like
+  # Endpoint is /birds/:id, but the body should have a "like" key *see last lab*
   def increment_likes
     bird = find_bird
     # if bird
